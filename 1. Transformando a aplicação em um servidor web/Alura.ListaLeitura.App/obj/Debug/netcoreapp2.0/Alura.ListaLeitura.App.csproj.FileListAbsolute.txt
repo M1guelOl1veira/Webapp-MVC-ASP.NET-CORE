@@ -1,0 +1,13 @@
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.deps.json
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.runtimeconfig.json
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.runtimeconfig.dev.json
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.dll
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\bin\Debug\netcoreapp2.0\Alura.ListaLeitura.App.pdb
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.csproj.AssemblyReference.cache
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.AssemblyInfoInputs.cache
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.AssemblyInfo.cs
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.csproj.CoreCompileInputs.cache
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.dll
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.pdb
+C:\Workspace\Alura dotNet para Web\1. Transformando a aplicação em um servidor web\Alura.ListaLeitura.App\obj\Debug\netcoreapp2.0\Alura.ListaLeitura.App.genruntimeconfig.cache
