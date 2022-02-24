@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\Alura dotNet para Web\\1. Transformando a aplicação em um servidor web\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj": {}
+    "C:\\Workspace\\Webapp-MVC-ASP.NET-Core\\1. Transformando a aplicação em um servidor web\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\Alura dotNet para Web\\1. Transformando a aplicação em um servidor web\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj": {
+    "C:\\Workspace\\Webapp-MVC-ASP.NET-Core\\1. Transformando a aplicação em um servidor web\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\Alura dotNet para Web\\1. Transformando a aplicação em um servidor web\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj",
+        "projectUniqueName": "C:\\Workspace\\Webapp-MVC-ASP.NET-Core\\1. Transformando a aplicação em um servidor web\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj",
         "projectName": "Alura.ListaLeitura.App",
-        "projectPath": "C:\\Workspace\\Alura dotNet para Web\\1. Transformando a aplicação em um servidor web\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj",
-        "packagesPath": "C:\\Users\\miguel.oliveira\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\Alura dotNet para Web\\1. Transformando a aplicação em um servidor web\\Alura.ListaLeitura.App\\obj\\",
+        "projectPath": "C:\\Workspace\\Webapp-MVC-ASP.NET-Core\\1. Transformando a aplicação em um servidor web\\Alura.ListaLeitura.App\\Alura.ListaLeitura.App.csproj",
+        "packagesPath": "C:\\Users\\LISCOMP02\\.nuget\\packages\\",
+        "outputPath": "C:\\Workspace\\Webapp-MVC-ASP.NET-Core\\1. Transformando a aplicação em um servidor web\\Alura.ListaLeitura.App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\miguel.oliveira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LISCOMP02\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
