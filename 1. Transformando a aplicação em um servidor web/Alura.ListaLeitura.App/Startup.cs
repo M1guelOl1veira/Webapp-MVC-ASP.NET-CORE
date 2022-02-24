@@ -28,7 +28,9 @@ namespace Alura.ListaLeitura.App
             builder.MapRoute("Livros/Lidos", LivrosLidos);
             //Criando uma rota com template.
             builder.MapRoute("Cadastro/NovoLivro/{nome}/{autor}", AdicionarLivro);
-            builder.MapRoute("Livros/Detalhes/{id}", ExibeDetalhes);
+            builder.MapRoute("Livros/Detalhes/{id:int}", ExibeDetalhes); //int é utilizado para dizer que só atende rotas que utilizam inteiro, caso contrário dará 404(não encontrada).
+            builder.MapRoute("Cadastro/NovoLivro", ExibeFormulario);
+            builder.MapRoute("Cadastro/Incluir", ProcessaFormulario);
             //Constrói essa coleção.
             var rotas = builder.Build();
             app.UseRouter(rotas);
@@ -36,7 +38,39 @@ namespace Alura.ListaLeitura.App
             //  app.Run(Roteamento);
         }
 
+        private Task ProcessaFormulario(HttpContext context)
+        {
+            var livro = new Livro()
+            {
+                //Maneira de extrair o valor do path da rota.
+                Titulo = context.Request.Query["titulo"].First(),
+                Autor = context.Request.Query["autor"].First()
+
+            };
+
+            var repo = new LivroRepositorioCSV();
+            repo.Incluir(livro);
+
+            return context.Response.WriteAsync("O livro foi adicionado com sucesso!");
+
+        }
+
+        private Task ExibeFormulario(HttpContext context)
+        {
+            var html = @"
+            <html>
+                <form action='/Cadastro/Incluir'>
+                    <input name='titulo'/>
+                    <input name='autor'/>
+                    <button>Cadastrar</button>
+                </form>
+            </html>";
+
+            return context.Response.WriteAsync(html);
+        }
+
         //HttpContext contem toda informação da requisição enviada.
+        //Reposta a requisição que passa o Id do livro.
         private Task ExibeDetalhes(HttpContext context)
         {
             int id = Convert.ToInt32(context.GetRouteValue("id"));
