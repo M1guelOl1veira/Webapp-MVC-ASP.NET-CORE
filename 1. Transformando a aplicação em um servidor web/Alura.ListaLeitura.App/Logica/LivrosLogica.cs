@@ -10,16 +10,16 @@ using System.Threading.Tasks;
 
 namespace Alura.ListaLeitura.App.Logica
 {
-    class LivrosLogica
+    public class LivrosController
     {
         //HttpContext contem toda informação da requisição enviada.
-        //Reposta a requisição que passa o Id do livro.+
-        public static Task ExibeDetalhes(HttpContext context)
+        //Reposta a requisição que passa o Id do livro.
+        //O estágio Model Binding do request pipeline faz a adequação necessária de cada action, no caso encontrar um id na requisição.
+        public string Detalhes(int id)
         {
-            int id = Convert.ToInt32(context.GetRouteValue("id"));
             var repo = new LivroRepositorioCSV();
             var livro = repo.Todos.First(l => l.Id == id);
-            return context.Response.WriteAsync(livro.Detalhes());
+            return livro.Detalhes();
         }
 
         public static Task LivrosParaLer(HttpContext context)
@@ -41,16 +41,20 @@ namespace Alura.ListaLeitura.App.Logica
             return context.Response.WriteAsync(html);
         }
 
-        public static Task LivrosLendo(HttpContext context)
+        public string LivrosLendo()
         {
             var _repo = new LivroRepositorioCSV();
-            return context.Response.WriteAsync(_repo.Lendo.ToString());
+            return _repo.Lendo.ToString();
         }
 
-        public static Task LivrosLidos(HttpContext context)
+        public string LivrosLidos()
         {
             var _repo = new LivroRepositorioCSV();
-            return context.Response.WriteAsync(_repo.Lidos.ToString());
+            return _repo.Lidos.ToString();
+        }
+        public string Teste()
+        {
+            return "aaa";
         }
     }
 }

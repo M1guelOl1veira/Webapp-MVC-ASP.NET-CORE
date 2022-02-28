@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Alura.ListaLeitura.App.Logica
 {
-    class CadastroLogica
+    public class CadastroController
     {
         public static Task ProcessaFormulario(HttpContext context)
         {
@@ -36,20 +36,13 @@ namespace Alura.ListaLeitura.App.Logica
             return context.Response.WriteAsync(html);
         }
 
-        public static Task AdicionarLivro(HttpContext context)
+        
+        public string AdicionarLivro(Livro livro)
         {
-            var livro = new Livro()
-            {
-                //Maneira de extrair o valor do path da rota.
-                Titulo = context.GetRouteValue("nome").ToString(),
-                Autor = context.GetRouteValue("autor").ToString()
-
-            };
-
             var repo = new LivroRepositorioCSV();
             repo.Incluir(livro);
 
-            return context.Response.WriteAsync("O livro foi adicionado com sucesso!");
+            return "O livro foi adicionado com sucesso!";
         }
     }
 }
