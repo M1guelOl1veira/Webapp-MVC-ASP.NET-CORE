@@ -10,11 +10,12 @@ using System.Threading.Tasks;
 
 namespace Alura.ListaLeitura.App.Logica
 {
+    //Adicionar controller no nome da classe é padrão e necessário para utilizaro roteamente MVC do ASP.NET Core.
     public class LivrosController
     {
         //HttpContext contem toda informação da requisição enviada.
         //Reposta a requisição que passa o Id do livro.
-        //O estágio Model Binding do request pipeline faz a adequação necessária de cada action, no caso encontrar um id na requisição.
+        //O estágio Model Binding do request pipeline faz a adequação necessária de cada action(métodos) e é executado antes da action, no caso encontrar um id na requisição.
         public string Detalhes(int id)
         {
             var repo = new LivroRepositorioCSV();
@@ -41,13 +42,13 @@ namespace Alura.ListaLeitura.App.Logica
             return context.Response.WriteAsync(html);
         }
 
-        public string LivrosLendo()
+        public string Lendo()
         {
             var _repo = new LivroRepositorioCSV();
             return _repo.Lendo.ToString();
         }
 
-        public string LivrosLidos()
+        public string Lidos()
         {
             var _repo = new LivroRepositorioCSV();
             return _repo.Lidos.ToString();
