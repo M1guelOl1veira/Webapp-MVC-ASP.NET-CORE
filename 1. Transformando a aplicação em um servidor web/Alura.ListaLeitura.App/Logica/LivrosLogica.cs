@@ -1,6 +1,8 @@
 ﻿using Alura.ListaLeitura.App.HTML;
+using Alura.ListaLeitura.App.Negocio;
 using Alura.ListaLeitura.App.Repositorio;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using System;
 using System.Collections.Generic;
@@ -11,8 +13,10 @@ using System.Threading.Tasks;
 namespace Alura.ListaLeitura.App.Logica
 {
     //Adicionar controller no nome da classe é padrão e necessário para utilizaro roteamente MVC do ASP.NET Core.
-    public class LivrosController
+    public class LivrosController : Controller
     {
+        public IEnumerable<Livro> Livros { get; set; }
+
         //HttpContext contem toda informação da requisição enviada.
         //Reposta a requisição que passa o Id do livro.
         //O estágio Model Binding do request pipeline faz a adequação necessária de cada action(métodos) e é executado antes da action, no caso encontrar um id na requisição.
@@ -23,39 +27,28 @@ namespace Alura.ListaLeitura.App.Logica
             return livro.Detalhes();
         }
 
-        public static Task LivrosParaLer(HttpContext context)
+        public IActionResult ParaLer()
         {
             //RequestDelegate tem como retorno o tipo Task, estudar paralelismo para mais informações.
             //Código executado quando uma requisição chegar.
+            //Quando a classe herda a classe controller ela é capaz de chamar o objeto na View, pq Controller é uma classe padrão do framework.
             var _repo = new LivroRepositorioCSV();
-            var html = UtilidadesHTML.CarregaArquivoHTML("paraLer");
-
-            foreach (var livros in _repo.ParaLer.Livros)
-            {
-                html = html
-                    .Replace("#Novo-Item#", $"<li>{livros.Titulo} - {livros.Autor}</li>#Novo-Item#");
-            }
-            //_repo.ParaLer.ToString(); Transforma a lista ParaLer em uma string.
-
-            html = html.Replace("#Novo-Item#", "");
-
-            return context.Response.WriteAsync(html);
+            ViewBag.Livros = _repo.ParaLer.Livros;
+            return View("lista");
         }
 
-        public string Lendo()
+        public IActionResult Lendo()
         {
             var _repo = new LivroRepositorioCSV();
-            return _repo.Lendo.ToString();
+            ViewBag.Livros = _repo.Lendo.Livros;
+            return View("lista");
         }
-
-        public string Lidos()
+ 
+        public IActionResult Lidos()
         {
             var _repo = new LivroRepositorioCSV();
-            return _repo.Lidos.ToString();
-        }
-        public string Teste()
-        {
-            return "aaa";
+            ViewBag.Livros = _repo.Lidos.Livros;
+            return View("lista");
         }
     }
 }

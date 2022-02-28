@@ -7,7 +7,10 @@
 </head>
 <body>
     <ul>
-        #Novo-Item#
+        @foreach (var livro in ViewBag.Livros)
+        {
+            <li>@livro.Titulo - @livro.Autor</li>
+        }
     </ul>
 </body>
 </html>
